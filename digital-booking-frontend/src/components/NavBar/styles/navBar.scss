@@ -1,0 +1,165 @@
+.navbar {
+  width: 100%;
+  padding: 0 $db-spacing-24;
+  height: 80px;
+  background-color: $db-primary;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 20;
+
+  &--fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+
+    &.typography--color-primary {
+      color: $db-white;
+    }
+  }
+
+  &__menu {
+    .list__item {
+      &:hover {
+        cursor: pointer;
+        transition: 0.5s;
+      }
+    }
+  }
+
+  &__slogan {
+    margin-left: $db-spacing-12;
+  }
+
+  &__toggle {
+    &.button {
+      display: none;
+
+      & svg {
+        width: 25px;
+        height: 25px;
+
+        pill {
+          color: $db-white;
+        }
+      }
+    }
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+
+    .bi-person-circle {
+      color: $db-white;
+      margin-right: $db-spacing-4;
+    }
+  }
+}
+
+// Media Queies
+@media screen and (max-width: 768px) {
+  .navbar {
+    height: 90px;
+    padding: 0 $db-spacing-20;
+    flex-direction: column;
+
+    &__logo {
+      height: 90px;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &__slogan {
+      display: none;
+      margin-left: 0;
+    }
+
+    &__slogan {
+      width: 80%;
+      margin-top: $db-spacing-4;
+
+      &.typography--color-primary {
+        color: $db-white;
+      }
+
+      &.typography--alignment-left {
+        text-align: center;
+      }
+
+      &.typography--weight-regular {
+        font-weight: $font-weight-light;
+      }
+    }
+
+    &__options {
+      top: 90px;
+      width: 100%;
+      position: fixed;
+      left: 100%;
+      transition: left 0.3s;
+
+      .navbar__menu {
+        transition: left 0.3s;
+        background-color: $db-white;
+        height: calc(100vh - 10px);
+
+        &.list--unordered {
+          padding: $db-spacing-12;
+        }
+
+        &.list--items-row {
+          width: 100%;
+          flex-direction: column;
+          position: fixed;
+        }
+
+        .list__item {
+          width: 100%;
+          padding: 12px;
+          border-bottom: 1px solid $db-gray-100;
+
+          .button {
+            font-size: $font-size-14;
+            color: $db-color-primary;
+            text-transform: uppercase;
+            background-color: transparent;
+            letter-spacing: 1px;
+            border: none;
+          }
+        }
+
+        .list__item:hover {
+          .typography--color-primary {
+            color: $db-primary;
+          }
+        }
+      }
+    }
+
+    &__toggle {
+      top: 32px;
+      right: $db-spacing-20;
+      position: absolute;
+
+      &.button {
+        display: block;
+      }
+
+      &.button--medium {
+        padding: 0;
+      }
+    }
+
+    &.navbar--open-menu {
+      .navbar__options {
+        left: 0;
+      }
+    }
+  }
+}

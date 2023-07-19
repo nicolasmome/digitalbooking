@@ -1,0 +1,70 @@
+.image-viewer {
+  display: flex;
+  max-height: 450px;
+  max-width: 600px;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: $db-spacing-8;
+    margin-right: $db-spacing-24;
+
+    &-image {
+      cursor: pointer;
+
+      .image > img {
+        opacity: 0.5;
+      }
+    }
+
+    &-image--selected {
+      .image > img {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__current {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    .image-viewer__prev-button,
+    .image-viewer__next-button {
+      &.button--medium {
+        width: $db-spacing-20;
+        height: $db-spacing-20;
+        padding: 0;
+        border-radius: 50%;
+        background-color: $db-gray-100;
+      }
+      .bi-chevron-left,
+      .bi-chevron-right {
+        color: $db-gray-450;
+      }
+    }
+  }
+}
+
+// Media Queies
+@media screen and (max-width: 768px) {
+  .image-viewer {
+    width: calc(100vw - 40px);
+    flex-direction: column;
+    height: auto;
+
+    &__list {
+      width: 100%;
+      height: 100px;
+      flex-direction: row;
+      align-items: center;
+      overflow: auto;
+      gap: $db-spacing-8;
+    }
+
+    &__current {
+      height: 180px;
+    }
+  }
+}

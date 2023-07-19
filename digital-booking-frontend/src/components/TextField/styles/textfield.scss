@@ -1,0 +1,81 @@
+.textfield {
+  margin-bottom: $db-spacing-12;
+
+  &--full-width {
+    width: 100%;
+
+    .textfield__input,
+    .textfield__textarea {
+      width: 100%;
+      display: block;
+    }
+  }
+
+  &--inline {
+    .textfield__input,
+    .textfield__textarea {
+      display: inline-block;
+    }
+  }
+
+  &__input,
+  &__textarea {
+    border: none;
+    outline: none;
+    color: $db-gray-450;
+    border-radius: $db-spacing-8;
+    border: 1px solid $db-gray-100;
+    padding: $db-spacing-12 $db-spacing-16;
+
+    &::placeholder {
+      font-family: $font-family-primary;
+      font-size: $font-size-12;
+      color: $db-gray-250;
+    }
+
+    &:focus {
+      outline: 1px solid $db-neutral;
+    }
+  }
+
+  #password ~ input {
+    width: 100%;
+  }
+
+  &--error {
+    // .textfield__input,
+    // .textfield__textarea {
+    //   border: 1px solid $db-color-negative;
+    // }
+  }
+
+  &--success {
+    .textfield__input,
+    .textfield__textarea {
+      border: 1px solid $db-color-positive;
+    }
+  }
+
+  &--textarea {
+    .textfield__textarea {
+      resize: none;
+      font-family: $font-family-primary;
+    }
+
+    .textfield__max-length {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: $db-spacing-4;
+
+      .helper-message {
+        margin-top: 0;
+      }
+
+      &-text {
+        font-size: $font-size-12;
+        line-height: $line-height-20;
+      }
+    }
+  }
+}

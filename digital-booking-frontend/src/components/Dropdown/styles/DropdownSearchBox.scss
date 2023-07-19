@@ -1,0 +1,53 @@
+.dropdown-search-box {
+  padding: $db-spacing-16;
+
+  &__container {
+    height: $db-spacing-32;
+    position: relative;
+  }
+
+  &__search-icon {
+    display: flex;
+    position: absolute;
+    top: calc(50% - 8px);
+    left: $db-spacing-8;
+  }
+
+  &__close-icon {
+    display: flex;
+    position: absolute;
+    top: calc(50% - $db-spacing-8);
+    right: $db-spacing-8;
+  }
+
+  &__close-button {
+    padding: 0;
+    position: absolute;
+    top: calc(50% - 8px);
+    right: 6px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    display: flex;
+  }
+
+  &__input {
+    width: 100%;
+    height: $db-spacing-32;
+    padding: $db-spacing-6 $db-spacing-28;
+    border: none;
+    border-radius: $db-spacing-16;
+    background-color: rgba(0, 0, 0, 0.04);
+    outline: none;
+    font-size: $db-spacing-12;
+    line-height: 18px;
+    font-family: inherit;
+    box-sizing: border-box;
+    position: relative;
+
+    &:focus {
+      box-shadow: none;
+      outline: 1.5px solid rgba(65, 137, 230, 0.4);
+    }
+  }
+}

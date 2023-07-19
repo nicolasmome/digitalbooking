@@ -1,0 +1,126 @@
+.admin-page {
+  margin-top: 80px;
+  min-height: 100vh;
+  background-color: $db-page-background;
+  display: flex;
+
+  &__aside {
+    width: 300px;
+    height: 100%;
+    color: $db-white;
+    background-color: $db-gray-750;
+
+    &-text {
+      span.typography--color-primary {
+        color: $db-white-700;
+      }
+    }
+
+    .list__item {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid $db-white-250;
+
+      .typography--color-primary {
+        color: $db-white-700;
+      }
+
+      svg {
+        display: flex;
+        margin-right: $db-spacing-12;
+        color: $db-white-700;
+      }
+
+      &--selected {
+        svg,
+        .typography--color-primary {
+          color: $db-white;
+        }
+      }
+
+      &:hover {
+        cursor: pointer;
+        background-color: $db-white-250;
+      }
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+
+  &__dashboard {
+    width: 100%;
+    padding: $db-spacing-24 $db-spacing-32;
+  }
+
+  .characteristics-inputs,
+  .images-inputs {
+    .textfield {
+      margin-bottom: 0;
+    }
+  }
+
+  .characteristics-inputs {
+    .characteristics__field {
+      display: grid;
+      align-items: center;
+      grid-template-columns: 10fr 1fr;
+
+      &-inputs {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-gap: $db-spacing-8;
+      }
+    }
+  }
+
+  .images-inputs {
+    .image__field {
+      display: grid;
+      grid-gap: 8px;
+      grid-template-columns: 10fr 1fr;
+      align-items: center;
+    }
+  }
+
+  .products-table {
+    max-width: 100%;
+  }
+
+  .table--skeleton {
+    .table {
+      width: 100%;
+    }
+
+    .table__heading,
+    .table__data {
+      border: none;
+    }
+
+    .table__row {
+      border-bottom: 1px solid $db-gray-100;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+
+    .table__row {
+      display: grid;
+      grid-template-columns: 80px 120px 1fr 1fr 120px 120px 180px 120px;
+    }
+  }
+}
+
+// Media Queries
+@media screen and (max-width: 768px) {
+  .admin-page {
+    margin-top: 90px;
+  }
+}

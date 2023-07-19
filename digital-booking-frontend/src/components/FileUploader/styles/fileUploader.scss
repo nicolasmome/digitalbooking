@@ -1,0 +1,90 @@
+.file-uploader {
+  &__dropzone {
+    width: 100%;
+    min-width: 320px;
+    height: 96px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    
+    &:hover {
+      background-color: rgba($db-color-neutral, 0.1);
+    }
+
+    &-input {
+      opacity: 0;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      margin: 0;
+      border: 0;
+      outline: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      cursor: pointer;
+    }
+
+    &-button {
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      margin: 0;
+      border: 1px dashed $db-color-neutral;
+      outline: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      background-color: transparent;
+      border-radius: 6px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &-icon {
+      vertical-align: middle;
+      margin-right: 4px;
+
+      .bi-upload {
+        color: $db-color-neutral;
+        font-weight: $font-weight-regular;
+      }
+    }
+
+    &-call-to-action {
+      font-size: $db-spacing-14;
+      font-weight: $font-weight-regular;
+      line-height: $line-height-28;
+      color: $db-color-neutral;
+    }
+
+    &-description {
+      font-size: $db-spacing-14;
+      font-weight: $font-weight-regular;
+      line-height: $line-height-28;
+      color: $db-gray-500;
+    }
+
+    &-requirements {
+      display: block;
+      font-size: $db-spacing-12;
+      font-weight: $font-weight-regular;
+      line-height: $line-height-28;
+      color: $db-gray-450;
+      margin-top: -5px;
+    }
+  }
+
+  &__preview-files {
+    display: flex;
+    padding: $db-spacing-8 0;
+    gap: 5px;
+    // display: grid;
+    // grid-template-columns: repeat(5,1fr);
+    // grid-gap: 5px;
+  }
+}

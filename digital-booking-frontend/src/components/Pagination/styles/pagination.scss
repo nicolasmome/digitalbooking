@@ -1,0 +1,37 @@
+.pagination {
+  display: flex;
+
+  &__prev-button,
+  &__next-button {
+    .bi-chevron-left,
+    .bi-chevron-right {
+      color: $db-gray-750;
+    }
+
+    .bi-chevron-left {
+      margin-right: $db-spacing-4;
+    }
+
+    .bi-chevron-right {
+      margin-left: $db-spacing-4;
+    }
+  }
+
+  &__item {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $db-gray-550;
+
+    &--current {
+      color: $db-white;
+      background-color: $db-color-neutral;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

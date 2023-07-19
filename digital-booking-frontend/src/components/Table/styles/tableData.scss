@@ -1,0 +1,17 @@
+.table {
+  .table__data {
+    color: $db-gray-550;
+
+    &--alignment-left {
+      text-align: left;
+    }
+
+    &--alignment-center {
+      text-align: center;
+    }
+
+    &--alignment-right {
+      text-align: right;
+    }
+  }
+}

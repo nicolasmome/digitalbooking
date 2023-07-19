@@ -1,0 +1,61 @@
+.home-page {
+  margin-top: 80px;
+  min-height: 100vh;
+  padding: $db-spacing-20;
+  background-color: $db-page-background;
+
+  &__container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .categories {
+    .swiper.categories-carousel {
+      .swiper-button-next,
+      .swiper-button-prev {
+        width: $db-spacing-40;
+        height: $db-spacing-40;
+        background-color: $db-white-650;
+        border-radius: 50%;
+
+        &::after {
+          font-size: $font-size-16;
+        }
+      }
+
+      .swiper-button-disabled {
+        display: none;
+      }
+    }
+  }
+
+  .products {
+    .card--orientation-horizontal {
+      .card__header {
+        border-right: 1px solid rgba(0, 0, 0, 0.07);
+      }
+    }
+  }
+}
+
+// Media Queries
+@media screen and (max-width: 768px) {
+  .home-page {
+    margin-top: 90px;
+
+    .categories {
+      .swiper.categories-carousel {
+        .swiper-button-next,
+        .swiper-button-prev {
+          width: $db-spacing-28;
+          height: $db-spacing-28;
+
+          &::after {
+            font-size: $font-size-14;
+          }
+        }
+      }
+    }
+  }
+}

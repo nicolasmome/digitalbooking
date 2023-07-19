@@ -1,0 +1,31 @@
+.login-page {
+  min-height: 100vh;
+  padding: $db-spacing-20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $db-page-background;
+
+  &__button-link {
+    .button.button--medium {
+      height: auto;
+    }
+  }
+
+  &__card {
+    position: relative;
+    min-width: 450px;
+    z-index: 10;
+  }
+}
+
+// Media Queries
+@media screen and (max-width: 768px) {
+  .login-page {
+    margin-top: 90px;
+
+    &__card {
+      min-width: 100%;
+    }
+  }
+}

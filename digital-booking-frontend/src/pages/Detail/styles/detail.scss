@@ -1,0 +1,42 @@
+.detail-page {
+  margin-top: 80px;
+  min-height: 100vh;
+  padding: $db-spacing-20;
+  background-color: $db-page-background;
+
+  &__container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .product-detail__back-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    &.button--medium {
+      padding: $db-spacing-6 $db-spacing-12;
+
+      .bi-arrow-left-short {
+        width: $db-spacing-32;
+        height: $db-spacing-32;
+        color: $db-gray-450;
+      }
+    }
+  }
+
+  .product-characteristics {
+    &__card {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+// Media Queries
+@media screen and (max-width: 768px) {
+  .detail-page {
+    margin-top: 90px;
+  }
+}

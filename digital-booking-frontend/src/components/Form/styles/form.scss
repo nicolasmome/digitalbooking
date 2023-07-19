@@ -1,0 +1,61 @@
+.form {
+  &--padding-0 {
+    padding: 0;
+  }
+
+  &--padding-12 {
+    padding: $db-spacing-12;
+  }
+
+  &--padding-16 {
+    padding: $db-spacing-16;
+  }
+
+  &--padding-24 {
+    padding: $db-spacing-24;
+  }
+
+  &--padding-32 {
+    padding: $db-spacing-32;
+  }
+
+  &--rounded-0 {
+    border-radius: 0;
+  }
+
+  &--rounded-6 {
+    border-radius: $db-spacing-6;
+  }
+
+  &--rounded-12 {
+    border-radius: $db-spacing-12;
+  }
+
+  &--rounded-16 {
+    border-radius: $db-spacing-16;
+  }
+
+  &--rounded-24 {
+    border-radius: $db-spacing-24;
+  }
+
+  &--rounded-32 {
+    border-radius: $db-spacing-32;
+  }
+
+  &--shadow-flat {
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.12);
+  }
+
+  &--shadow-outline {
+    border: 1px solid $db-gray-100;
+  }
+
+  &--shadow-elevated {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  &--shadow-none {
+    box-shadow: none;
+  }
+}

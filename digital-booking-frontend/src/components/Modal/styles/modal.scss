@@ -1,0 +1,215 @@
+.modal {
+  width: 40%;
+  height: auto;
+  background-color: $db-white;
+  position: relative;
+  z-index: 120;
+  transition: transform 1s;
+  box-sizing: border-box;
+  display: none;
+
+  &--open {
+    display: block;
+    transform: translateY(0%);
+  }
+
+  &__overlay {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: $db-gray-600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__content {
+    max-height: 500px;
+    overflow-y: auto;
+  }
+
+  &__close-icon {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__confirm-button {
+    margin-right: $db-spacing-4;
+  }
+
+  &__title {
+    font-size: $font-size-24;
+    font-weight: $font-weight-semibold;
+    line-height: $line-height-24;
+    color: $db-gray-600;
+  }
+
+  &--padding-0 {
+    .modal__header,
+    .modal__content,
+    .modal__actions {
+      padding: 0;
+    }
+  }
+
+  &--padding-4 {
+    .modal__header {
+      padding: $db-spacing-4;
+    }
+
+    .modal__content,
+    .modal__actions {
+      padding-left: $db-spacing-4;
+      padding-right: $db-spacing-4;
+      padding-bottom: $db-spacing-4;
+    }
+
+    .modal__actions {
+      padding-top: $db-spacing-4;
+    }
+  }
+
+  &--padding-8 {
+    .modal__header {
+      padding: $db-spacing-8;
+    }
+
+    .modal__content,
+    .modal__actions {
+      padding-left: $db-spacing-8;
+      padding-right: $db-spacing-8;
+      padding-bottom: $db-spacing-8;
+    }
+
+    .modal__actions {
+      padding-top: $db-spacing-8;
+    }
+  }
+
+  &--padding-12 {
+    .modal__header {
+      padding: $db-spacing-12;
+    }
+
+    .modal__content,
+    .modal__actions {
+      padding-left: $db-spacing-12;
+      padding-right: $db-spacing-12;
+      padding-bottom: $db-spacing-12;
+    }
+
+    .modal__actions {
+      padding-top: $db-spacing-12;
+    }
+  }
+
+  &--padding-16 {
+    .modal__header {
+      padding: $db-spacing-16;
+    }
+
+    .modal__content,
+    .modal__actions {
+      padding-left: $db-spacing-16;
+      padding-right: $db-spacing-16;
+      padding-bottom: $db-spacing-16;
+    }
+
+    .modal__actions {
+      padding-top: $db-spacing-16;
+    }
+  }
+
+  &--padding-20 {
+    .modal__header {
+      padding: $db-spacing-20;
+    }
+
+    .modal__content,
+    .modal__actions {
+      padding-left: $db-spacing-20;
+      padding-right: $db-spacing-20;
+      padding-bottom: $db-spacing-20;
+    }
+
+    .modal__actions {
+      padding-top: $db-spacing-16;
+    }
+  }
+
+  &--padding-24 {
+    .modal__header {
+      padding: $db-spacing-24;
+    }
+
+    .modal__content,
+    .modal__actions {
+      padding-left: $db-spacing-24;
+      padding-right: $db-spacing-24;
+      padding-bottom: $db-spacing-24;
+    }
+
+    .modal__actions {
+      padding-top: $db-spacing-16;
+    }
+  }
+
+  &--padding-32 {
+    .modal__header {
+      padding: $db-spacing-32;
+    }
+
+    .modal__content,
+    .modal__actions {
+      padding-left: $db-spacing-32;
+      padding-right: $db-spacing-32;
+      padding-bottom: $db-spacing-32;
+    }
+
+    .modal__actions {
+      padding-top: $db-spacing-16;
+    }
+  }
+
+  &--rounded-0 {
+    border-radius: 0;
+  }
+
+  &--rounded-4 {
+    border-radius: $db-spacing-4;
+  }
+
+  &--rounded-6 {
+    border-radius: $db-spacing-6;
+  }
+
+  &--rounded-8 {
+    border-radius: $db-spacing-8;
+  }
+
+  &--rounded-12 {
+    border-radius: $db-spacing-12;
+  }
+
+  &--rounded-16 {
+    border-radius: $db-spacing-16;
+  }
+
+  &--rounded-24 {
+    border-radius: $db-spacing-24;
+  }
+
+  &--rounded-32 {
+    border-radius: $db-spacing-32;
+  }
+}

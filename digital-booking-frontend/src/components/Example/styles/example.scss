@@ -1,0 +1,23 @@
+.example {
+  padding: 20px;
+
+  &__text {
+    margin-bottom: 10px;
+  }
+
+  &__paragraph {
+    margin-bottom: 10px;
+  }
+
+  &__button {
+    padding: 10px 20px;
+    background-color: dodgerblue;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

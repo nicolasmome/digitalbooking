@@ -1,0 +1,49 @@
+.skeleton {
+  display: block;
+  height: 100%;
+  width: 100%;
+  margin-bottom: 8px;
+  background: linear-gradient(to left, #e5e5e5, #f5f5f5 49%, #e5e5e5 100%);
+  background-size: 400% 400%;
+  border-radius: 2px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &--circle {
+    border-radius: 50%;
+  }
+
+  &--hollow-circle {
+    border-radius: 50%;
+    box-sizing: border-box;
+    position: relative;
+
+    &::before {
+      content: "";
+      width: $db-spacing-48;
+      height: $db-spacing-48;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      border-radius: 50%;
+      background-color: $db-white;
+    }
+  }
+
+  &--animated {
+    animation: pulse 1.2s ease-in-out infinite;
+    @keyframes pulse {
+      0% {
+        background-position: 0% 0%;
+      }
+      100% {
+        background-position: -135% 0%;
+      }
+    }
+  }
+}

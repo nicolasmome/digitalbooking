@@ -1,0 +1,19 @@
+.row {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  
+  @for $i from 1 through $max-rows {
+    &--#{$i} {
+      grid-template-rows: repeat($i, 1fr);
+    }
+  }
+
+  &--spacing {
+    @each $name, $space in $spaces {
+      &-#{$name} {
+        grid-gap: $space;
+      }
+    }
+  }
+}

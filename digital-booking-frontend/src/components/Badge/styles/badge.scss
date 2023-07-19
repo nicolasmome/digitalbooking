@@ -1,0 +1,77 @@
+.badge {
+  display: inline-block;
+  font-size: $font-size-12;
+  font-weight: $font-weight-semibold;
+  border-radius: $db-spacing-12;
+
+  &__content {
+    height: 100%;
+    padding: 6px;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: $db-white;
+  }
+
+  &--size-small {
+    &.badge--border-standard {
+      height: $db-spacing-16;
+      line-height: $line-height-8;
+    }
+
+    &.badge--border-corner {
+      border-top-right-radius: $db-spacing-8;
+      border-top-left-radius: 0;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: $db-spacing-8;
+    }
+
+    &.badge--border-rounded {
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: $db-spacing-8;
+    }
+  }
+
+  &--size-large {
+    height: $db-spacing-24;
+
+    &.badge--border-corner {
+      border-top-right-radius: $db-spacing-12;
+      border-top-left-radius: 0;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: $db-spacing-12;
+    }
+
+    &.badge--border-rounded {
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: $db-spacing-12;
+    }
+  }
+
+  &--type-generic {
+    background-color: $db-color-generic;
+  }
+
+  &--type-neutral {
+    background-color: $db-color-neutral;
+  }
+
+  &--type-success {
+    background-color: $db-color-positive;
+  }
+
+  &--type-warning {
+    background-color: $db-color-caution;
+  }
+
+  &--type-error {
+    background-color: $db-color-negative;
+  }
+
+  &--standard {
+    border-radius: 6px;
+  }
+}

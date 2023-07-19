@@ -1,0 +1,43 @@
+.breadcrumb {
+  margin: 0;
+  padding: $db-spacing-4 0;
+  list-style-type: none;
+  display: flex;
+
+  &__level {
+    display: flex;
+    align-items: center;
+    font-size: $font-size-14;
+    line-height: 14px;
+    font-weight: $font-weight-light;
+    color: $db-gray-900;
+  }
+
+  &__link {
+    color: $db-gray-900;
+    text-decoration: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__label {
+    color: $db-gray-900;
+
+    &-text {
+      color: $db-gray-450;
+    }
+  }
+
+  &__chevron {
+    padding-left: $db-spacing-8;
+    padding-right: $db-spacing-8;
+
+    .bi-chevron-right {
+      display: flex;
+      width: $db-spacing-8;
+      height: $db-spacing-8;
+    }
+  }
+}

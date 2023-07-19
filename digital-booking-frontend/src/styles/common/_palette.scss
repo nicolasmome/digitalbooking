@@ -1,0 +1,62 @@
+// Palette
+
+// Basic colors
+$db-white: #fff;
+$db-black: #000;
+
+// Translucent gray colors
+$db-gray-100: rgba($db-black, 0.1);
+$db-gray-250: rgba($db-black, 0.25);
+$db-gray-350: rgba($db-black, 0.35);
+$db-gray-400: rgba($db-black, 0.4);
+$db-gray-450: rgba($db-black, 0.45);
+$db-gray-500: rgba($db-black, 0.5);
+$db-gray-550: rgba($db-black, 0.55);
+$db-gray-600: rgba($db-black, 0.6);
+$db-gray-700: rgba($db-black, 0.7);
+$db-gray-750: rgba($db-black, 0.75);
+$db-gray-800: rgba($db-black, 0.8);
+$db-gray-900: rgba($db-black, 0.9);
+
+// Translucent whitey colors
+$db-white-100: rgba($db-white, 0.1);
+$db-white-250: rgba($db-white, 0.25);
+$db-white-350: rgba($db-white, 0.35);
+$db-white-450: rgba($db-white, 0.45);
+$db-white-500: rgba($db-white, 0.5);
+$db-white-550: rgba($db-white, 0.55);
+$db-white-600: rgba($db-white, 0.6);
+$db-white-700: rgba($db-white, 0.7);
+$db-white-750: rgba($db-white, 0.75);
+$db-white-800: rgba($db-white, 0.8);
+$db-white-900: rgba($db-white, 0.9);
+
+
+// Translucent white colors
+$db-white-650: rgba(255, 255, 255, 0.65);
+
+// DB Colors
+$db-primary: #9061c2;
+$db-page-background: #f8f9f9;
+
+// Fedback colors
+$db-positive: #00a650;
+$db-neutral: #3483fa;
+$db-warning: #f73;
+$db-error: #f23d4f;
+$db-generic: #737373;
+
+// Font colors
+$db-color-primary: $db-gray-900;
+$db-color-secondary: $db-gray-550;
+$db-color-disabled: $db-gray-250;
+$db-color-link: rgba(52, 131, 250);
+$db-color-neutral: $db-neutral;
+$db-color-positive: $db-positive;
+$db-color-negative: $db-error;
+$db-color-caution: $db-warning;
+$db-color-generic: $db-generic;
+$db-color-neutral-dark: #2968c8;
+$db-color-positive-dark: #388e3c;
+$db-color-negative-dark: #d32f2f;
+$db-color-caution-dark: #e64a19;

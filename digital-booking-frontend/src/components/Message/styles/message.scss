@@ -1,0 +1,189 @@
+.message {
+  color: $db-white;
+  font-size: $font-size-12;
+  line-height: $line-height-14;
+  border-radius: $db-spacing-6;
+  padding: $db-spacing-14 $db-spacing-16;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  &__notification {
+    display: flex;
+    align-items: center;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 358px;
+    flex: 1;
+  }
+
+  &::before {
+    content: "";
+    width: $db-spacing-4;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top-left-radius: $db-spacing-6;
+    border-bottom-left-radius: $db-spacing-6;
+  }
+
+  &__close-button {
+    &.button--medium {
+      height: max-content;
+    }
+  }
+
+  &__icon {
+    display: inline-block;
+    margin-right: $db-spacing-12;
+
+    svg {
+      width: $db-spacing-16;
+      height: $db-spacing-16;
+      display: flex;
+    }
+  }
+
+  &--neutral {
+    background-color: $db-color-neutral;
+
+    &.message--quiet {
+      .message__icon {
+        svg {
+          color: $db-color-neutral;
+        }
+      }
+
+      &::before {
+        background-color: $db-color-neutral;
+      }
+    }
+  }
+
+  &--success {
+    background-color: $db-color-positive;
+
+    &.message--quiet {
+      .message__icon {
+        svg {
+          color: $db-color-positive;
+        }
+      }
+      &::before {
+        background-color: $db-color-positive;
+      }
+    }
+  }
+
+  &--warning {
+    background-color: $db-color-caution;
+
+    &.message--quiet {
+      .message__icon {
+        svg {
+          color: $db-color-caution;
+        }
+      }
+      &::before {
+        background-color: $db-color-caution;
+      }
+    }
+  }
+
+  &--error {
+    background-color: $db-color-negative;
+
+    &.message--quiet {
+      .message__icon {
+        svg {
+          color: $db-color-negative;
+        }
+      }
+      &::before {
+        background-color: $db-color-negative;
+      }
+    }
+  }
+
+  &--quiet {
+    color: $db-gray-600;
+    background-color: rgba(0, 0, 0, 0.07);
+
+    .message__close-button {
+      &.button--medium {
+        color: $db-gray-900;
+      }
+    }
+  }
+
+  // Margin top
+  &--margin-top-2 {
+    margin-top: $db-spacing-2;
+  }
+
+  &--margin-top-4 {
+    margin-top: $db-spacing-4;
+  }
+
+  &--margin-top-8 {
+    margin-top: $db-spacing-8;
+  }
+
+  &--margin-top-12 {
+    margin-top: $db-spacing-12;
+  }
+
+  &--margin-top-16 {
+    margin-top: $db-spacing-16;
+  }
+
+  &--margin-top-20 {
+    margin-top: $db-spacing-20;
+  }
+
+  &--margin-top-24 {
+    padding-top: $db-spacing-24;
+  }
+
+  &--margin-top-32 {
+    padding-top: $db-spacing-32;
+  }
+
+  // Margin bottom
+  &--margin-bottom-2 {
+    margin-bottom: $db-spacing-2;
+  }
+
+  &--margin-bottom-4 {
+    margin-bottom: $db-spacing-4;
+  }
+
+  &--margin-bottom-8 {
+    margin-bottom: $db-spacing-8;
+  }
+
+  &--margin-bottom-12 {
+    margin-bottom: $db-spacing-12;
+  }
+
+  &--margin-bottom-16 {
+    margin-bottom: $db-spacing-16;
+  }
+
+  &--margin-bottom-20 {
+    margin-bottom: $db-spacing-20;
+  }
+
+  &--margin-bottom-24 {
+    margin-bottom: $db-spacing-24;
+  }
+
+  &--margin-bottom-32 {
+    margin-bottom: $db-spacing-32;
+  }
+}

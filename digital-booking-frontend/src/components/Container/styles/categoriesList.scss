@@ -1,0 +1,24 @@
+.categories-list {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 15px;
+}
+
+// Media Queies
+@media screen and (min-width: 480px) {
+  .categories-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .categories-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .categories-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

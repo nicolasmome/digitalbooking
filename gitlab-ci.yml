@@ -1,0 +1,76 @@
+# Archivo .gitlab-ci.yml
+
+# Variables globales
+variables:
+  MYSQL_USER: "<root>"
+  MYSQL_PASSWORD: "<6kS5j+aDJxHgykVD>"
+  MYSQL_DATABASE: "booking_db"
+
+# Stages
+stages:
+  - build
+  - test
+  - deploy
+
+# Jobs
+build_job:
+  stage: build
+  script:
+    - echo "Compilando tu aplicación..."
+    
+    # Comandos para compilar el frontend (JavaScript)
+    - cd frontend/  # Ruta al directorio del frontend
+    - npm install   # Instalar dependencias
+    - npm run build # Compilar el código
+    
+    # Comandos para compilar el backend (Java con Maven)
+    - cd ../backend/  # Ruta al directorio del backend
+    - mvn clean      # Limpiar el proyecto
+    - mvn compile    # Compilar el código
+
+test_job:
+  stage: test
+  script:
+    - echo "Ejecutando pruebas..."
+    
+    # Comandos para ejecutar pruebas en el frontend (JavaScript)
+    - cd frontend/  # Ruta al directorio del frontend
+    - npm test      # Ejecutar pruebas
+    
+    # Comandos para ejecutar pruebas en el backend (Java con Maven)
+    - cd ../backend/  # Ruta al directorio del backend
+    - mvn test        # Ejecutar pruebas con Maven
+
+production_deploy_job:
+  stage: deploy
+  script:
+    - echo "Implementando tu aplicación en la instancia de producción..."
+    
+    # Comandos para el despliegue del frontend (JavaScript)
+    - cd frontend/  # Ruta al directorio del frontend
+    - npm install   # Instalar dependencias
+    - npm run build # Compilar el código
+    - # Comandos adicionales para desplegar el frontend en tu instancia de producción
+    
+    # Comandos para el despliegue del backend (Java con Maven)
+    - cd ../backend/  # Ruta al directorio del backend
+    - mvn clean      # Limpiar el proyecto
+    - mvn compile    # Compilar el código
+    - # Comandos adicionales para desplegar el backend en tu instancia de producción
+    
+    # Otros comandos adicionales que puedas necesitar
+
+continuous_deployment:
+  stage: deploy
+  script:
+    - echo "Desplegando en entorno de pruebas..."
+    - # Comandos para el despliegue continuo en un entorno de pruebas
+    - # Puedes utilizar herramientas como Docker, Kubernetes, SSH, etc.
+  
+# Definición de los artifacts (artefactos) a almacenar
+# Puedes personalizar esta sección según tus necesidades
+# Aquí se asume que el directorio de artefactos es "frontend/dist" para el frontend y "backend/target" para el backend
+artifacts:
+  paths:
+    - frontend/dist/
+    - backend/target/

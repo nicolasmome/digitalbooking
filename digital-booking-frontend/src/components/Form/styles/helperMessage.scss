@@ -1,0 +1,34 @@
+.helper-message {
+  display: flex;
+  align-items: center;
+  margin-top: $db-spacing-4;
+  color: $db-gray-550;
+
+  &__text {
+    display: block;
+    font-size: $font-size-12;
+  }
+
+  & > svg {
+    width: $db-spacing-12;
+    margin-right: $db-spacing-4;
+  }
+
+  &--error {
+    &.helper-message {
+      .helper-message__text,
+      svg {
+        color: $db-color-negative;
+      }
+    }
+  }
+
+  &--success {
+    &.helper-message {
+      .helper-message__text,
+      svg {
+        color: $db-color-positive;
+      }
+    }
+  }
+}
